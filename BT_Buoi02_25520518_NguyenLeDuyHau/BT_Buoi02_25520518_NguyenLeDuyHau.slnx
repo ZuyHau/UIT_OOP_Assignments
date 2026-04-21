@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Bai01/Bai01.vcxproj" />
+  <Project Path="Bai02/Bai02.vcxproj" />
+  <Project Path="Bai03/Bai03.vcxproj" />
+  <Project Path="Bai04/Bai04.vcxproj" />
+  <Project Path="Bai05/Bai05.vcxproj" />
+  <Project Path="Bai06/Bai06.vcxproj" />
+  <Project Path="Bai07/Bai07.vcxproj" />
+</Solution>
