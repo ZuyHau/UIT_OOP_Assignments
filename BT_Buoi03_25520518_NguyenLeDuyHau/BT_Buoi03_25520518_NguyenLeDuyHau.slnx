@@ -3,8 +3,13 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="Bai01/Bai01.vcxproj" Id="18858692-5532-4214-9afe-954443a0898c" />
   <Project Path="Bai02/Bai02.vcxproj" Id="78f8d795-e426-4b03-ae35-60f9a66d5fee" />
   <Project Path="Bai03/Bai03.vcxproj" Id="3086ce81-e2a2-4ec0-a2ee-bfd0bf7ccb16" />
   <Project Path="Bai04/Bai04.vcxproj" Id="fcc50559-6722-42d4-afce-42d80a0d30d0" />
+  <Project Path="Bai05/Bai05.vcxproj" Id="1c7a6d10-5bbe-4263-b9b7-41c91d7ac845" />
+  <Project Path="Bai06/Bai06.vcxproj" Id="d08bb998-c47f-44fd-baca-b253f04c616e" />
+  <Project Path="Bai07/Bai07.vcxproj" Id="342d871a-89da-414d-aa1c-239003c6da1c" />
+  <Project Path="Bai08/Bai08.vcxproj" Id="9c071fa8-f3ea-43c4-a290-94baa1a131b8" />
   <Project Path="BT_Buoi03_25520518_NguyenLeDuyHau/BT_Buoi03_25520518_NguyenLeDuyHau.vcxproj" Id="92cd11a2-7db1-478b-8b1a-a5c999adf1c0" />
 </Solution>

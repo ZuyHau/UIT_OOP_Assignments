@@ -23,14 +23,13 @@ public:
 
     void Nhap();
     void Xuat();
-
-    bool KiemTra(); // Kiểm tra 3 điểm có tạo thành tam giác không
+    bool KiemTra();
     string PhanLoai();
     float TinhChuVi();
     float TinhDienTich();
 
     void TinhTien(float dx, float dy);
-    void Quay(float goc); // Quay quanh gốc tọa độ
+    void Quay(float goc); // Quay quanh gốc tọa độ O(0,0)
     void PhongTo(float k);
     void ThuNho(float k);
 };

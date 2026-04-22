@@ -5,43 +5,36 @@
 #include "cTamGiac.h"
 
 #define PI 3.1415926535
-#define EPSILON 0.0001 // Sai số cho phép khi so sánh số thực
+#define EPSILON 0.0001
 
 cTamGiac::cTamGiac() {}
 cTamGiac::~cTamGiac() {}
 
-// Hàm bổ trợ tính khoảng cách giữa 2 điểm
+// Hàm hỗ trợ tính khoảng cách giữa hai điểm
 float KhoangCach(Diem d1, Diem d2) {
     return sqrt(pow(d2.x - d1.x, 2) + pow(d2.y - d1.y, 2));
 }
 
 void cTamGiac::Nhap() {
     do {
-        cout << "Nhap tọa do dinh A (x y): "; cin >> A.x >> A.y;
-        cout << "Nhap tọa do dinh B (x y): "; cin >> B.x >> B.y;
-        cout << "Nhap tọa do dinh C (x y): "; cin >> C.x >> C.y;
-        if (!KiemTra()) {
-            cout << "Ba diem thang hang! Khong tao thanh tam giac. Vui long nhap lai.\n";
-        }
+        cout << "Nhap toa do dinh A (x y): "; cin >> A.x >> A.y;
+        cout << "Nhap toa do dinh B (x y): "; cin >> B.x >> B.y;
+        cout << "Nhap toa do dinh C (x y): "; cin >> C.x >> C.y;
+        if (!KiemTra()) cout << "Ba diem khong tao thanh tam giac hop le! Vui long nhap lai.\n";
     } while (!KiemTra());
 }
 
 void cTamGiac::Xuat() {
-    cout << "Toa do: A(" << A.x << ", " << A.y << "), B(" << B.x << ", " << B.y << "), C(" << C.x << ", " << C.y << ")" << endl;
+    cout << "A(" << A.x << "," << A.y << "), B(" << B.x << "," << B.y << "), C(" << C.x << "," << C.y << ")\n";
 }
 
 bool cTamGiac::KiemTra() {
-    float a = KhoangCach(B, C);
-    float b = KhoangCach(A, C);
-    float c = KhoangCach(A, B);
+    float a = KhoangCach(B, C), b = KhoangCach(A, C), c = KhoangCach(A, B);
     return (a + b > c + EPSILON && a + c > b + EPSILON && b + c > a + EPSILON);
 }
 
 string cTamGiac::PhanLoai() {
-    float a = KhoangCach(B, C);
-    float b = KhoangCach(A, C);
-    float c = KhoangCach(A, B);
-
+    float a = KhoangCach(B, C), b = KhoangCach(A, C), c = KhoangCach(A, B);
     bool deu = (abs(a - b) < EPSILON && abs(b - c) < EPSILON);
     bool can = (abs(a - b) < EPSILON || abs(b - c) < EPSILON || abs(a - c) < EPSILON);
     bool vuong = (abs(a * a + b * b - c * c) < 0.1 || abs(a * a + c * c - b * b) < 0.1 || abs(b * b + c * c - a * a) < 0.1);
@@ -58,9 +51,7 @@ float cTamGiac::TinhChuVi() {
 }
 
 float cTamGiac::TinhDienTich() {
-    float a = KhoangCach(B, C);
-    float b = KhoangCach(A, C);
-    float c = KhoangCach(A, B);
+    float a = KhoangCach(B, C), b = KhoangCach(A, C), c = KhoangCach(A, B);
     float p = TinhChuVi() / 2;
     return sqrt(p * (p - a) * (p - b) * (p - c));
 }
@@ -73,12 +64,12 @@ void cTamGiac::TinhTien(float dx, float dy) {
 
 void cTamGiac::Quay(float goc) {
     float rad = goc * (float)PI / 180.0f;
-    auto rotatePoint = [&](Diem& d) {
+    auto rot = [&](Diem& d) {
         float x_old = d.x;
         d.x = x_old * cos(rad) - d.y * sin(rad);
         d.y = x_old * sin(rad) + d.y * cos(rad);
         };
-    rotatePoint(A); rotatePoint(B); rotatePoint(C);
+    rot(A); rot(B); rot(C);
 }
 
 void cTamGiac::PhongTo(float k) {

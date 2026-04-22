@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{92cd11a2-7db1-478b-8b1a-a5c999adf1c0}</ProjectGuid>
-    <RootNamespace>BTBuoi0325520518NguyenLeDuyHau</RootNamespace>
+    <ProjectGuid>{1c7a6d10-5bbe-4263-b9b7-41c91d7ac845}</ProjectGuid>
+    <RootNamespace>Bai05</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Bai01</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,11 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cTamGiac.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClInclude Include="cDaThuc.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cTamGiac.h" />
+    <ClCompile Include="cDaThuc.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
